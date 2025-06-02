@@ -51,6 +51,7 @@ function addCard(cardNumber) {
 async function drawSingleCard() {
     resetPlayfield();
     drawCard();
+    showEn()
 }
 
 async function drawCard(cardNum=undefined) {
