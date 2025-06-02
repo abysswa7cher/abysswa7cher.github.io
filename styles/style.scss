@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "transcity";
-    src: url("../assets/transcity.otf");
-}
-
-@font-face {
     font-family: "refinery";
     src: url("../assets/refinery-25-regular.ttf");
 }
@@ -18,6 +13,11 @@
     src: url("../assets/Orbitron-ExtraBold.ttf");
 }
 
+@font-face {
+    font-family: "cyberpunk";
+    src: url("../assets/Cyberpunk-Regular.ttf");
+}
+
 $vampire_black: #080808;
 $milk: #fdfff5;
 $ivory: #ffffe0;
@@ -27,6 +27,7 @@ body {
     background-color: $vampire_black;
     margin: 0;
     padding: 0;
+    background-image: url("/img/2077.jpg");
 }
 
 #body-wrapper {
@@ -38,38 +39,24 @@ body {
 
 #title {
     color: $milk;
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    margin: auto auto;
-    padding-top: 1rem;
+    font-family: cyberpunk;
+    line-height: 0;
+    font-size: 30px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
-    h1 {
-        font-family: transcity;
-        font-size: 60px;
+    @media (min-width: 1020px) {
+        font-size: 50px;
     }
 
-    h4 {
-        font-size: 26px;
-    }
-
-    #title-wrapper {
-        @media (min-width: 720px) {
-            width: 50%;
-        }
-
-        margin: auto auto;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
+    @media (max-width: 620px) {
+        font-size: 18px;
     }
 }
 
 #title-buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
     padding-top: 1rem;
 
@@ -78,7 +65,9 @@ body {
         color: $milk;
         font-size: 26px;
         margin: auto 0;
-        padding: 10px;
+        padding-left: 3%;
+        padding-right: 3%;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
 }
 
@@ -87,8 +76,7 @@ body {
     margin: 1rem auto;
     display: flex;
     justify-content: space-evenly;
-    width: 50rem;
-    padding-bottom: 10rem;
+    width: 80%;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -102,8 +90,8 @@ body {
 .card-wrapper {
     position: relative;
     overflow: hidden;
-    height: 30rem;
-    width: 15rem;
+    height: 700px;
+    width: 400px;
 
     border-radius: 5px;
     background-color: $vampire_black;
@@ -160,22 +148,44 @@ body {
         overflow-y: auto;
         z-index: 2;
 
+        h2 {
+            font-family: orbitron-semibold;
+            margin: 1rem 1rem;
+        }
+
+        p {
+            font-family: refinery;
+            margin: 1rem 1rem;
+        }
+
+        @media (min-width: 720px) {
+            h2 {
+                font-size: 34px;
+            }
+
+            p {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 719px) {
+            p {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            p {
+                font-size: 24px;
+            }
+        }
+
+
         * {
             color: $milk;
             text-align: center;
         }
 
-        h2 {
-            margin: 1rem 1rem;
-            font-size: 26px;
-            font-family: orbitron-semibold;
-        }
-
-        p {
-            margin: 1rem 1rem;
-            font-family: refinery;
-            font-size: 20px;
-        }
 
         #de,
         #en {
@@ -194,15 +204,7 @@ body {
     }
 }
 
-#lang-select-top {
-    @media (min-width: 720px) {
-        display: none;
-    }
 
-    @media (max-width: 719px) {
-        display: flex;
-    }
-}
 
 .lang-select {
     .lang-en {
@@ -212,7 +214,7 @@ body {
     justify-content: center;
     position: relative;
     transition: 0.5s ease-out;
-    bottom: -90%;
+    bottom: -93%;
     z-index: 3;
     display: flex;
 
@@ -238,6 +240,20 @@ body {
     }
 }
 
+#lang-select-top {
+    a {
+        border: none;
+    }
+
+    @media (min-width: 720px) {
+        display: none;
+    }
+
+    @media (max-width: 719px) {
+        display: flex;
+    }
+}
+
 .button {
     &:hover {
         cursor: pointer;
@@ -253,8 +269,11 @@ body {
     }
 
     @media (max-width: 719px) {
-        font-size: 26px;
-        width: max-content;
+        font-size: 24px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 16px;
     }
 
     background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
@@ -264,7 +283,10 @@ body {
     box-shadow: 6px 0px 0px #00e6f6;
     position: relative;
     font-family: orbitron-extrabold;
-
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .button::after {
