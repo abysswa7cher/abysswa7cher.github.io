@@ -1,0 +1,106 @@
+{
+    "1": {
+        "name": "Der Narr",
+        "desc": "Der Narr ist jeder - auch du und ich. Jeder Schritt, den er auf seiner Reise macht, fühlt sich an, als würde er in eine mutige neue Welt eintreten. Letztendlich wird die Reise ihn verändern. Aber wie die Karte zeigt, ist er ein vertrauenswürdiger Junge, dessen unermüdliche Hoffnung ihn zu seinem Ziel treibt."
+    },
+    "2": {
+        "name": "Der Magier",
+        "desc": "Der Magier ist die Karte des Selbstbewusstseins und der Anpassung an Situationen durch Intellekt und schieren Willen. Der Magier ist ein Intrigant, der immer einen letzten Trick im Ärmel hat, der es trotz allem schafft, sich über Wasser zu halten und sein Schicksal selbst in die Hand zu nehmen."
+    },
+    "3": {
+        "name": "Die Hohepriesterin",
+        "desc": "Die Hohepriesterin ist eine Karte des Geheimnisses. Sie zeigt, wie alle unsere Geheimnisse an einem zarten Faden hängen und den Kampf zwischen Vernunft und Intuition. Die Hohepriesterin symbolisiert sowohl die kalten, ruhigen Gewässer als auch die in ihren Tiefen verborgenen Geheimnisse."
+    },
+    "4": {
+        "name": "Die Kaiserin",
+        "desc": "Die Kaiserin ist eine Karte der Weiblichkeit und der Mutterschaft. Sie ist autoritär, weiß, was sie will, und zeichnet sich durch Raffinesse und Sinnlichkeit aus. Die Kaiserin symbolisiert Kreativität und Wachstum und lehrt uns, unsere unbewussten Impulse nicht zu verwerfen, sondern unserer Intuition zu vertrauen."
+    },
+    "5": {
+        "name": "Der Kaiser",
+        "desc": "Der Kaiser verkörpert die patriarchalische Kontrolle und ist zufrieden mit der Autorität und Macht, die er besitzt, um die Zukunft zu gestalten. Der Kaiser stellt die Regeln auf und setzt sie zum Wohle der Allgemeinheit durch. Aber Prestige hat auch seine Schattenseiten: Der Kaiser ist dominant und rücksichtslos und wird über einen Berg von Leichen steigen, um sein Ziel zu erreichen."
+    },
+    "6": {
+        "name": "Der Hierophant",
+        "desc": "Der Hierophant symbolisiert den Respekt vor der Tradition. Er repräsentiert jemanden, der versucht, die etablierte Ordnung aufrechtzuerhalten, obwohl sein eigener Charakter davon geprägt ist. Der Hierophant setzt sein Vertrauen in Institutionen, denn die Alternative wäre reines Chaos. Nur aus dem Glauben an die Ordnung kann er Kraft schöpfen."
+    },
+    "7": {
+        "name": "Die Liebenden",
+        "desc": "Die Liebenden ist die Karte der Dichotomien. Sie verweist auf die Widersprüche, die in jedem von uns aufeinanderprallen, und auf die Herausforderung, ein Gleichgewicht zwischen den Extremen zu finden. Die Liebenden ist auch die Karte der Dilemmas, wie der Narr, der am Scheideweg steht und nicht in der Lage ist, eine Entscheidung zu treffen."
+    },
+    "8": {
+        "name": "Der Streitwagen",
+        "desc": "Der Streitwagen fährt immer vorwärts, obwohl er von seinen Rössern in entgegengesetzte Richtungen gezogen wird. Der Fahrer, der ihn lenkt, zügelt ständig die hellen und dunklen Seiten der Seele mit Hilfe der Vernunft. Im Chariot zu fahren bedeutet, Höhen und Tiefen, Höhen und Tiefen zu erleben."
+    },
+    "9": {
+        "name": "Stärke",
+        "desc": "Stärke ist die Karte der Widerstandsfähigkeit. Sie wird mit Entschlossenheit, Tapferkeit und innerem Kampf assoziiert. Man muss Hingabe haben, um Hindernisse zu überwinden und sein Ziel zu erreichen. Stärke steht für körperliche Kraft und geistige Stärke - die Kraft, die man entfesseln muss, um das Unmögliche zu erreichen."
+    },
+    "10": {
+        "name": "Der Eremit",
+        "desc": "Der Eremit ist eine Karte der selbst auferlegten Isolation. Er steht für eine Flucht aus der Hektik der Stadt, eine Abkehr von der ständigen Neuheit und eine Hinwendung zu alten Wegen. Für den Einsiedler ist die Einsamkeit der Weg zum Erhabenen, ein Weg, der nicht mit großen Schritten, sondern mit kleinen, konzentrierten Schritten beschritten wird."
+    },
+    "11": {
+        "name": "Das Glücksrad",
+        "desc": "Das Glücksrad bedeutet, dass eine Veränderung bevorsteht. Das eigene Schicksal kann sich zum Guten oder zum Schlechten wenden, aber es birgt auch das Versprechen neuer Möglichkeiten. Das Rad erinnert uns daran, dass niemand für immer an der Spitze bleibt, aber auch, dass nicht jede Situation hoffnungslos ist."
+    },
+    "12": {
+        "name": "Gerechtigkeit",
+        "desc": "Gerechtigkeit ist die Karte der Konfliktlösung. Sie verkündet das Bedürfnis nach Ordnung, das Durchschauen von Lug und Trug und die Rückkehr zum natürlichen Zustand der Dinge. Gerechtigkeit bedeutet ein gerechtes Urteil, aber auch ein ordentliches Verfahren."
+    },
+    "13": {
+        "name": "Der Gehängte",
+        "desc": "Der Gehängte ist die Karte des Opfers. Sie besagt, dass ein Preis gezahlt werden muss, um Erleuchtung zu erlangen. Die Verlassenheit des Gehängten öffnet den Weg zur Wiedergeburt in ein neues Leben, auch wenn dieser Weg mit Schmerzen verbunden ist, die in der Zeit schweben und schließlich im Tod enden."
+    },
+    "14": {
+        "name": "Der Tod",
+        "desc": "Der Tod ist die Karte des Werdens. Er steht für einen bevorstehenden und schwierigen Übergang, den Abschluss einer Lebensphase und den Beginn einer anderen. Unvermeidlich geht während der Transformation etwas verloren, aber etwas anderes wird aufsteigen und seinen Platz einnehmen."
+    },
+    "15": {
+        "name": "Mäßigung",
+        "desc": "Mäßigung ist die Karte des Gleichgewichts. Sie kann Selbstbeherrschung oder den allmählichen Übergang zu einem reiferen Zustand des Gleichgewichts symbolisieren. Mäßigung wird mit Selbstbeherrschung und dem Wunsch nach innerem Frieden in Verbindung gebracht."
+    },
+    "16": {
+        "name": "Der Teufel",
+        "desc": "Der Teufel ist Sucht, Begierde und Leidenschaft. Er bringt Ruhm und Reichtum, aber um den Preis, dass man sich in einer Welt voller materieller Ablenkungen verliert. Der Teufel lockt ahnungslose Seelen in Fallen, aber er lässt ihnen immer eine Wahl. Man kann sein Glück versuchen und auf sein Angebot eingehen, aber man sollte immer wissen, wann man aufhören muss"
+    },
+    "17": {
+        "name": "Der Turm",
+        "desc": "Der Turm ist ein Omen für radikale Veränderungen, Chaos und Zerstörung. Der Blitz, der in den Turm einschlägt, steht für die Rückkehr zur alten Ordnung, die unter den Ruinen begraben liegt, und für eine neue Ordnung, die daraus hervorgehen wird. Er ist ein Symbol für Tragödie, Apokalypse und Selbstzerstörung."
+    },
+    "18": {
+        "name": "Der Stern",
+        "desc": "Der Stern ist die Karte der Hoffnung. In der dunkelsten aller Nächte leuchtet ein Licht, das den Weg nach Hause zeigt. Der Stern ist Inspiration, Motivation und gibt uns Kraft, vorwärts zu gehen."
+    },
+    "19": {
+        "name": "Der Mond",
+        "desc": "Der Mond erinnert uns daran, dass die Realität nicht immer das ist, was sie auf den ersten Blick zu sein scheint. In einer Welt des Scheins und der Illusionen ist es oft die eigene Intuition, die den besten Weg weist. Der Mond ist auch die Karte der Träume, der Sehnsüchte und natürlich des Schlafes, dem nächtlichen Ritual des Todes."
+    },
+    "20": {
+        "name": "Die Sonne",
+        "desc": "Die Sonne symbolisiert den Erfolg. Sie ist eine Karte der Freiheit, der Erneuerung und einer strahlenden Zukunft, die vor uns liegt. Die Sonne steht auch für die Wahrheit, denn ihr Licht wird immer den Vorhang des Schattens zurückziehen, der die Geheimnisse der Welt verbirgt. Sie steht auch für Größe und Pracht"
+    },
+    "21": {
+        "name": "Das Jüngste Gericht",
+        "desc": "Das Jüngste Gericht ist die Karte der Erneuerung. Der Engel, der in das Horn bläst, kündigt Auferstehung und Befreiung an. Diese Karte kündigt eine wichtige Veränderung an, die zu Heilung oder Erfüllung führt. Sie ist auch ein Symbol für den Selbstwert."
+    },
+    "22": {
+        "name": "Die Welt",
+        "desc": "Die Welt liegt am Ende der langen und gewundenen Reise des Narren. Weiser und weltmüder als zu Beginn seiner Reise, steht der Narr vor einem Moment der Abrechnung. Einige von uns akzeptieren, wohin ihre Reise sie geführt hat, während andere sich einer neuen Herausforderung stellen. Eines ist in dieser Welt sicher: Man kann nicht alles haben."
+    },
+    "23": {
+        "name": "Ein König der Kelche",
+        "desc": "Ein König der Kelche ist ein kreativer und gefühlsbetonter Mensch. Sie sind starke Persönlichkeiten, die die Bedeutung von Gefühlen erkennen. Intuition hilft ihnen, ihr Leben zu meistern. Wenn das Schicksal zu ihren Gunsten ist, leitet Mitgefühl ihr Handeln. Wenn sie mit dem Schicksal im Konflikt stehen, wäre es unklug, ihnen zu vertrauen."
+    },
+    "24": {
+        "name": "Der König der Münzen",
+        "desc": "Der König der Münzen ist herrisch. Er steht für Unternehmertum, Pragmatismus, aber auch für Eigensinn. Von einer solchen Person kann man Kälte oder Anhaftung an materiellen Besitz erwarten; sie wird wahrscheinlich früher oder später deine Welt auf den Kopf stellen."
+    },
+    "25": {
+        "name": "Der König der Schwerter",
+        "desc": "Für einen König der Schwerter sind vor allem zwei Dinge wichtig: Logik und Überzeugung. Sie repräsentieren eine Person mit einem präzisen moralischen Kompass, die für ihr fürsorgliches Auftreten bekannt ist. Feinde sollten sich jedoch in Acht nehmen - der König der Schwerter ist ein unbarmherziger Gegner, der nicht ruhen wird, bis du bestraft und von den Hunden des Schicksals zerrissen worden bist."
+    },
+    "26": {
+        "name": "Der König der Stäbe",
+        "desc": "Der Meister der Planung und der unorthodoxen Ideen. Eine Person, die Menschen zusammenbringt und Inspiration auf diejenigen ausstrahlt, die sie als Freunde betrachten. Ihre Feinde werden jedoch bald feststellen, dass sie eine impulsive, zerstörerische Naturgewalt sind, die fähig ist, Eide zu brechen und jede Grenze zu überschreiten, nur um ihre Ziele zu erreichen."
+    }
+}

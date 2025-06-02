@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "transcity";
+  src: url("../assets/transcity.otf");
+}
+@font-face {
+  font-family: "refinery";
+  src: url("../assets/refinery-25-regular.ttf");
+}
+@font-face {
+  font-family: "orbitron-semibold";
+  src: url("../assets/Orbitron-SemiBold.ttf");
+}
+@font-face {
+  font-family: "orbitron-extrabold";
+  src: url("../assets/Orbitron-ExtraBold.ttf");
+}
+body {
+  background-color: #080808;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/retro-pattern-4518357_960_720.png");
+  background-repeat: repeat;
+}
+
+#body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#title {
+  color: #fdfff5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto auto;
+  padding-top: 1rem;
+}
+#title h1 {
+  font-family: transcity;
+  font-size: 60px;
+}
+#title h4 {
+  font-size: 26px;
+}
+#title #title-wrapper {
+  width: 50%;
+  margin: auto auto;
+}
+#title #title-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+#title-buttons {
+  display: flex;
+}
+#title-buttons .title-button {
+  margin: auto auto;
+  color: #fdfff5;
+  font-family: orbitron-extrabold;
+  font-size: 50px;
+}
+#title-buttons .title-button p {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#title-buttons .title-button:hover {
+  cursor: pointer;
+}
+
+#playfield {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50rem;
+  padding-bottom: 10rem;
+}
+@media (max-width: 768px) {
+  #playfield {
+    width: 100%;
+  }
+}
+
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+  width: 15rem;
+  border: 1px #ff007f solid;
+  border-radius: 5px;
+  background-color: #080808;
+}
+.card-wrapper .img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.card-wrapper .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-wrapper:hover .desc {
+  bottom: 0;
+}
+.card-wrapper .desc {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -100%;
+  left: 0;
+  background-color: rgba(8, 8, 8, 0.75);
+  opacity: 1;
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  z-index: 2;
+}
+.card-wrapper .desc * {
+  color: #fdfff5;
+  text-align: center;
+}
+.card-wrapper .desc h2 {
+  margin: 1rem 1rem;
+  font-size: 26px;
+  font-family: orbitron-semibold;
+}
+.card-wrapper .desc p {
+  margin: 1rem 1rem;
+  font-family: refinery;
+  font-size: 20px;
+}
+.card-wrapper .desc #de,
+.card-wrapper .desc #en {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-out;
+  height: 80%;
+  display: inline-block;
+}
+.card-wrapper .desc #de {
+  transform: translateX(100%);
+}
+.card-wrapper .desc .lang-select {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 33%;
+  transition: 0.5s ease-out;
+}
+.card-wrapper .desc .lang-select a {
+  background-color: #080808;
+  padding: 3px;
+  font-size: 28px;
+  border-top: 1px solid #ff007f;
+  border-bottom: 1px solid #ff007f;
+  text-decoration: none;
+  font-family: orbitron-semibold;
+}
+.card-wrapper .desc .lang-select a:hover {
+  background-color: #303030;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
