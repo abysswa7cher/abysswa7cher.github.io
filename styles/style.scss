@@ -128,6 +128,7 @@ body {
     }
 
     &:hover .desc,
+    &:focus .desc,
     &:active .desc {
         bottom: 0;
     }
@@ -178,10 +179,10 @@ body {
         .lang-select {
             display: flex;
             justify-content: center;
-            position: absolute;
-            bottom: 1rem;
-            left: 33%;
+            position: relative;
             transition: 0.5s ease-out;
+            bottom: -80%;
+            z-index: 3;
 
             a {
                 background-color: $vampire_black;

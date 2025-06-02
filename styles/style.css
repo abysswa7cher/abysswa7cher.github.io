@@ -112,7 +112,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-wrapper:hover .desc, .card-wrapper:active .desc {
+.card-wrapper:hover .desc, .card-wrapper:focus .desc, .card-wrapper:active .desc {
   bottom: 0;
 }
 .card-wrapper .desc {
@@ -156,10 +156,10 @@ body {
 .card-wrapper .desc .lang-select {
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 1rem;
-  left: 33%;
+  position: relative;
   transition: 0.5s ease-out;
+  bottom: -80%;
+  z-index: 3;
 }
 .card-wrapper .desc .lang-select a {
   background-color: #080808;
