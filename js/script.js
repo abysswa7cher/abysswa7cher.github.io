@@ -2,7 +2,6 @@ var cardNames=  ['01_TheFool.webp', '02_TheMagician.webp', '03_TheHighPriestess.
 var cardDescEn = "assets/card-desc-en.json"
 var cardDescDe = "assets/card-desc-de.json"
 var cardNumbers = Array.from({ length: cardNames.length }, (_, i) => i + 1)
-var cardCount = 0
 var cardsDescEn;
 var cardsDescDe;
 
@@ -42,21 +41,22 @@ function addCard(cardNumber) {
                     <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
                 </div>
             </div>`;
+            document.addEventListener("card-"+cardNumber, scrollDescriptionUp(cardNumber), true);
     } else {
         console.error(`Could not find data for card number: ${cardNumber}`);
     }
 }
 
-async function drawCard(cardNum=undefined) {
-    if (cardCount >= 3) {
-        resetPlayfield();
-    }
+async function drawSingleCard() {
+    resetPlayfield();
+    drawCard();
+}
 
+async function drawCard(cardNum=undefined) {
     try {
         const cardNumber = cardNum ? cardNum : cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
         cardNumbers.pop(cardNumber)
         addCard(cardNumber);
-        cardCount += 1
     } catch (e) {
         console.log(e)
     }
@@ -109,4 +109,8 @@ function showEn(cardNum) {
 function showDe(cardNum) {
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
+}
+
+function scrollDescriptionUp(cardNumber) {
+    document.getElementById("card-"+cardNumber).childNodes.item(1).childNodes.item(1).style.bottom = "0";
 }
