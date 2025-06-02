@@ -32,13 +32,14 @@ function addCard(cardNumber) {
                         <h2>${cardNameDe}</h2>
                         <p>${cardDescDe}</p>
                     </div>
-                    <div class="lang-select">
-                        <a id="lang-en" onclick="showEn('${cardNumber}')">EN</a>
-                        <a id="lang-de" onclick="showDe('${cardNumber}')">DE</a>
-                    </div>
+                    
                 </div>
                 <div class="img-wrapper">
-                    <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
+                <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
+                </div>
+                <div class="lang-select">
+                    <a id="lang-en" onclick="showEn('${cardNumber}')">EN</a>
+                    <a id="lang-de" onclick="showDe('${cardNumber}')">DE</a>
                 </div>
             </div>`;
             document.addEventListener("card-"+cardNumber, scrollDescriptionUp(cardNumber), true);
@@ -104,11 +105,15 @@ async function getCardsDesc(lang) {
 function showEn(cardNum) {
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(0%)";
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(100%)";
+    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#303030"
+    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#080808"
 }
 
 function showDe(cardNum) {
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
+    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#080808"
+    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#303030"
 }
 
 function scrollDescriptionUp(cardNumber) {

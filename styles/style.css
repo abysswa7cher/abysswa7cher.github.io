@@ -108,12 +108,12 @@ body {
 }
 .card-wrapper .img-wrapper img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .card-wrapper:hover .desc, .card-wrapper:focus .desc, .card-wrapper:active .desc {
-  bottom: 0;
+  bottom: 0%;
 }
 .card-wrapper .desc {
   position: absolute;
@@ -125,6 +125,7 @@ body {
   opacity: 1;
   transition: 0.3s ease-out;
   overflow-x: hidden;
+  overflow-y: auto;
   z-index: 2;
 }
 .card-wrapper .desc * {
@@ -153,24 +154,30 @@ body {
 .card-wrapper .desc #de {
   transform: translateX(100%);
 }
-.card-wrapper .desc .lang-select {
+
+.lang-select {
   display: flex;
   justify-content: center;
   position: relative;
   transition: 0.5s ease-out;
-  bottom: -80%;
+  bottom: -90%;
   z-index: 3;
 }
-.card-wrapper .desc .lang-select a {
+.lang-select #lang-en {
+  background-color: #303030;
+}
+.lang-select a {
+  text-align: center;
+  width: 50%;
   background-color: #080808;
-  padding: 3px;
+  padding: 7px;
   font-size: 28px;
   border-top: 1px solid #ff007f;
-  border-bottom: 1px solid #ff007f;
   text-decoration: none;
   font-family: orbitron-semibold;
+  color: #fdfff5;
 }
-.card-wrapper .desc .lang-select a:hover {
+.lang-select a:hover {
   background-color: #303030;
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
