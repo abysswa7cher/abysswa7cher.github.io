@@ -1,7 +1,7 @@
 var cardNames=  ['01_TheFool.webp', '02_TheMagician.webp', '03_TheHighPriestess.webp', '04_TheEmpress.webp', '05_TheEmperor.webp', '06_TheHierophant.webp', '07_TheLovers.webp', '08_TheChariot.webp', '09_Strength.webp', '10_TheHermit.webp', '11_WheelOfFortune.webp', '12_Justice.webp', '13_TheHangedMan.webp', '14_Death.webp', '15_Temperance.webp', '16_TheDevil.webp', '17_TheTower.webp', '18_TheStar.webp', '19_TheMoon.webp', '20_TheSun.webp', '21_Judgement.webp', '22_TheWorld.webp', '23_KingOfCups_CP2077PL.webp', '24_KingOfPentacles_CP2077PL.webp', '25_KingOfSwords_CP2077PL.webp', '26_KingOfWands_CP2077PL.webp']
 var cardDescEn = "assets/card-desc-en.json"
 var cardDescDe = "assets/card-desc-de.json"
-var cardNumbers = Array.from({ length: 26 }, (_, i) => i + 1)
+var cardNumbers = Array.from({ length: cardNames.length }, (_, i) => i + 1)
 var cardCount = 0
 var cardsDescEn;
 var cardsDescDe;
@@ -13,25 +13,16 @@ async function init() {
 
 init()
 
-async function drawCard(cardNum=undefined) {
-    if (cardCount >= 3) {
-        resetPlayfield();
-    }
+function addCard(cardNumber) {
+    const cardNameEn = cardsDescEn[cardNumber.toString()].name;
+    const cardDescEn = cardsDescEn[cardNumber.toString()].desc;
+    const cardNameDe = cardsDescDe[cardNumber.toString()].name;
+    const cardDescDe = cardsDescDe[cardNumber.toString()].desc;
 
-    try {
-        const cardNumber = cardNum ? cardNum : cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
-        cardNumbers.pop(cardNumber)
-        console.log(cardNumbers)
+    const cardImageName = cardNames[cardNumber - 1];
     
-        const cardNameEn = cardsDescEn[cardNumber.toString()].name;
-        const cardDescEn = cardsDescEn[cardNumber.toString()].desc;
-        const cardNameDe = cardsDescDe[cardNumber.toString()].name;
-        const cardDescDe = cardsDescDe[cardNumber.toString()].desc;
-    
-        const cardImageName = cardNames[cardNumber - 1];
-    
-        if (cardNameEn && cardImageName) {
-            document.getElementById('playfield').innerHTML += `
+    if (cardNameEn && cardImageName) {
+        document.getElementById('playfield').innerHTML += `
             <div class="card-wrapper" id="card-${cardNumber}">
                 <div class="desc">
                     <div id="en">
@@ -43,17 +34,28 @@ async function drawCard(cardNum=undefined) {
                         <p>${cardDescDe}</p>
                     </div>
                     <div class="lang-select">
-                        <a id="lang-en" href="#playfield" onclick="showEn('${cardNumber}')">EN</a>
-                        <a id="lang-de" href="#playfield" onclick="showDe('${cardNumber}')">DE</a>
+                        <a id="lang-en" onclick="showEn('${cardNumber}')">EN</a>
+                        <a id="lang-de" onclick="showDe('${cardNumber}')">DE</a>
                     </div>
                 </div>
                 <div class="img-wrapper">
                     <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
                 </div>
             </div>`;
-        } else {
-            console.error(`Could not find data for card number: ${cardNumber}`);
-        }
+    } else {
+        console.error(`Could not find data for card number: ${cardNumber}`);
+    }
+}
+
+async function drawCard(cardNum=undefined) {
+    if (cardCount >= 3) {
+        resetPlayfield();
+    }
+
+    try {
+        const cardNumber = cardNum ? cardNum : cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
+        cardNumbers.pop(cardNumber)
+        addCard(cardNumber);
         cardCount += 1
     } catch (e) {
         console.log(e)
@@ -72,7 +74,7 @@ async function getReading() {
 function resetPlayfield() {
     document.getElementById('playfield').innerHTML = "";
     cardCount = 0;
-    cardNumbers = Array.from({ length: 26 }, (_, i) => i + 1);
+    cardNumbers = Array.from({ length: cardNames.length }, (_, i) => i + 1);
 }
 
 function shuffle(array) {
@@ -84,7 +86,6 @@ function shuffle(array) {
     }
     return shuffled
 }
-
 
 async function getCardsDesc(lang) {
     try {
@@ -108,4 +109,4 @@ function showEn(cardNum) {
 function showDe(cardNum) {
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
     document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
-}   
+}
