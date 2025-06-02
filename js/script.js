@@ -15,9 +15,7 @@ init()
 
 async function drawCard(cardNum=undefined) {
     if (cardCount >= 3) {
-        document.getElementById('playfield').innerHTML = "";
-        cardCount = 0;
-        cardNumbers = Array.from({ length: 26 }, (_, i) => i + 1);
+        resetPlayfield();
     }
 
     try {
@@ -64,11 +62,17 @@ async function drawCard(cardNum=undefined) {
 
 async function getReading() {
     let numbers = shuffle([...cardNumbers]).slice(0, 3);
-
+    resetPlayfield();
     for (let i = 0; i < numbers.length; i++) {
         const cardNumber = numbers[i];
         drawCard(cardNumber)
     }
+}
+
+function resetPlayfield() {
+    document.getElementById('playfield').innerHTML = "";
+    cardCount = 0;
+    cardNumbers = Array.from({ length: 26 }, (_, i) => i + 1);
 }
 
 function shuffle(array) {
