@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100%;
 }
 
 #title {
@@ -61,7 +62,7 @@ body {
   font-family: orbitron-extrabold;
   font-size: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #title-buttons .title-button {
     font-size: 20px;
   }
@@ -74,6 +75,9 @@ body {
 }
 #title-buttons .title-button:hover {
   cursor: pointer;
+}
+#title-buttons #or:hover {
+  cursor: auto;
 }
 
 #playfield {
@@ -88,13 +92,17 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  #playfield {
+    width: 100%;
+  }
+}
 
 .card-wrapper {
   position: relative;
   overflow: hidden;
   height: 30rem;
   width: 15rem;
-  border: 1px #ff007f solid;
   border-radius: 5px;
   background-color: #080808;
 }
@@ -108,12 +116,24 @@ body {
 }
 .card-wrapper .img-wrapper img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-wrapper:hover .desc, .card-wrapper:focus .desc, .card-wrapper:active .desc {
-  bottom: 0%;
+@media (max-width: 720px) {
+  .card-wrapper:hover .desc, .card-wrapper:focus .desc, .card-wrapper:active .desc {
+    transition: 0s;
+    position: fixed;
+    width: 80%;
+    height: 25rem;
+    top: 20%;
+    left: 10%;
+  }
+}
+@media (min-width: 720px) {
+  .card-wrapper:hover .desc, .card-wrapper:focus .desc, .card-wrapper:active .desc {
+    bottom: 0%;
+  }
 }
 .card-wrapper .desc {
   position: absolute;
@@ -155,16 +175,32 @@ body {
   transform: translateX(100%);
 }
 
+@media (min-width: 720px) {
+  #lang-select-top {
+    display: none;
+  }
+}
+@media (max-width: 719px) {
+  #lang-select-top {
+    display: flex;
+  }
+}
+
 .lang-select {
-  display: flex;
   justify-content: center;
   position: relative;
   transition: 0.5s ease-out;
   bottom: -90%;
   z-index: 3;
+  display: flex;
 }
-.lang-select #lang-en {
+.lang-select .lang-en {
   background-color: #303030;
+}
+@media (max-width: 719px) {
+  .lang-select {
+    display: none;
+  }
 }
 .lang-select a {
   text-align: center;

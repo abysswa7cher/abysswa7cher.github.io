@@ -35,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
 }
 
 #title {
@@ -74,7 +75,7 @@ body {
         font-family: orbitron-extrabold;
         font-size: 50px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             font-size: 20px;
         }
 
@@ -87,6 +88,13 @@ body {
 
         &:hover {
             cursor: pointer;
+        }
+
+    }
+
+    #or {
+        &:hover {
+            cursor: auto;
         }
     }
 }
@@ -101,6 +109,10 @@ body {
     @media (max-width: 768px) {
         width: 100%;
     }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .card-wrapper {
@@ -108,7 +120,7 @@ body {
     overflow: hidden;
     height: 30rem;
     width: 15rem;
-    border: 1px $barbie-pink solid;
+
     border-radius: 5px;
     background-color: $vampire_black;
 
@@ -122,15 +134,33 @@ body {
 
         img {
             width: 100%;
-            height: 90%;
+            height: 100%;
             object-fit: cover;
         }
     }
 
-    &:hover .desc,
-    &:focus .desc,
-    &:active .desc {
-        bottom: 0%;
+    @media (max-width: 720px) {
+
+        &:hover .desc,
+        &:focus .desc,
+        &:active .desc {
+            transition: 0s;
+            position: fixed;
+            width: 80%;
+            height: 25rem;
+            top: 20%;
+            left: 10%;
+        }
+    }
+
+
+    @media (min-width: 720px) {
+
+        &:hover .desc,
+        &:focus .desc,
+        &:active .desc {
+            bottom: 0%;
+        }
     }
 
     .desc {
@@ -180,16 +210,30 @@ body {
     }
 }
 
+#lang-select-top {
+    @media (min-width: 720px) {
+        display: none;
+    }
+
+    @media (max-width: 719px) {
+        display: flex;
+    }
+}
+
 .lang-select {
-    display: flex;
+    .lang-en {
+        background-color: #303030;
+    }
+
     justify-content: center;
     position: relative;
     transition: 0.5s ease-out;
     bottom: -90%;
     z-index: 3;
+    display: flex;
 
-    #lang-en {
-        background-color: #303030;
+    @media (max-width: 719px) {
+        display: none;
     }
 
     a {
@@ -208,4 +252,6 @@ body {
             cursor: pointer;
         }
     }
+
+
 }

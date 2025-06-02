@@ -70,6 +70,7 @@ async function getReading() {
         const cardNumber = numbers[i];
         drawCard(cardNumber)
     }
+    showEn()
 }
 
 function resetPlayfield() {
@@ -102,18 +103,38 @@ async function getCardsDesc(lang) {
     }
 }
 
-function showEn(cardNum) {
-    document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(0%)";
-    document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(100%)";
-    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#303030"
-    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#080808"
+function showEn(cardNum=undefined) {
+    if (cardNum) {
+        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(0%)";
+        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(100%)";
+        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#303030"
+        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#080808"
+    } else {
+        for (var i of document.getElementById("playfield").childNodes.entries()) {
+            if (i[1].id) {
+                showEn(i[1].id.slice(5))
+            }
+        }
+        document.getElementById("lang-select-top").childNodes.item(1).style.backgroundColor = "#303030"
+        document.getElementById("lang-select-top").childNodes.item(3).style.backgroundColor = "#080808"
+    }
 }
 
-function showDe(cardNum) {
-    document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
-    document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
-    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#080808"
-    document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#303030"
+function showDe(cardNum=undefined) {
+    if (cardNum) {
+        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
+        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
+        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#080808"
+        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#303030"
+    } else {
+        for (var i of document.getElementById("playfield").childNodes.entries()) {
+            if (i[1].id) {
+                showDe(i[1].id.slice(5))
+            }
+        }
+        document.getElementById("lang-select-top").childNodes.item(1).style.backgroundColor = "#080808"
+        document.getElementById("lang-select-top").childNodes.item(3).style.backgroundColor = "#303030"
+    }
 }
 
 function scrollDescriptionUp(cardNumber) {
