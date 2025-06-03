@@ -19,22 +19,22 @@ function addCard(cardNumber) {
     const cardDescDe = cardsDescDe[cardNumber.toString()].desc;
 
     const cardImageName = cardNames[cardNumber - 1];
-    
+    let flipped = Math.random() > .777
     if (cardNameEn && cardImageName) {
         document.getElementById('playfield').innerHTML += `
             <div class="card-wrapper" id="card-${cardNumber}">
                 <div class="desc" id="card-${cardNumber}-desc">
                     <div id="en">
-                        <h2>${cardNameEn}</h2>
+                        <h2>${cardNameEn + (flipped ? ' Reversed' : '')}</h2>
                         <p>${cardDescEn}</p>
                     </div>
                     <div id="de">
-                        <h2>${cardNameDe}</h2>
+                        <h2>${cardNameDe + (flipped ? ' Umgekehrt' : '')}</h2>
                         <p>${cardDescDe}</p>
                     </div>
                     
                 </div>
-                <div class="img-wrapper">
+                <div class="img-wrapper ${flipped ? 'flipped' : ''}">
                 <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
                 </div>
                 <div class="lang-select" id="card-${cardNumber}-lang">
@@ -42,7 +42,6 @@ function addCard(cardNumber) {
                     <a id="lang-de" onclick="showDe('${cardNumber}')">DE</a>
                 </div>
             </div>`;
-            document.addEventListener("card-"+cardNumber, scrollDescriptionUp(cardNumber), true);
     } else {
         console.error(`Could not find data for card number: ${cardNumber}`);
     }
@@ -136,8 +135,4 @@ function showDe(cardNum=undefined) {
         document.getElementById("lang-select-top").childNodes.item(1).style.backgroundColor = "#080808"
         document.getElementById("lang-select-top").childNodes.item(3).style.backgroundColor = "#303030"
     }
-}
-
-function scrollDescriptionUp(cardNumber) {
-    document.getElementById("card-"+cardNumber).childNodes.item(1).childNodes.item(1).style.bottom = "0";
 }
