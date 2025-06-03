@@ -23,7 +23,7 @@ function addCard(cardNumber) {
     if (cardNameEn && cardImageName) {
         document.getElementById('playfield').innerHTML += `
             <div class="card-wrapper" id="card-${cardNumber}">
-                <div class="desc">
+                <div class="desc" id="card-${cardNumber}-desc">
                     <div id="en">
                         <h2>${cardNameEn}</h2>
                         <p>${cardDescEn}</p>
@@ -37,7 +37,7 @@ function addCard(cardNumber) {
                 <div class="img-wrapper">
                 <img src="img/cards/${cardImageName}" alt="${cardNameEn}">
                 </div>
-                <div class="lang-select">
+                <div class="lang-select" id="card-${cardNumber}-lang">
                     <a id="lang-en" onclick="showEn('${cardNumber}')">EN</a>
                     <a id="lang-de" onclick="showDe('${cardNumber}')">DE</a>
                 </div>
@@ -106,10 +106,10 @@ async function getCardsDesc(lang) {
 
 function showEn(cardNum=undefined) {
     if (cardNum) {
-        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(0%)";
-        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(100%)";
-        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#303030"
-        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#080808"
+        document.getElementById(`card-${cardNum}-desc`).childNodes.item(1).style.transform = "translateX(0%)";
+        document.getElementById(`card-${cardNum}-desc`).childNodes.item(3).style.transform = "translateX(100%)";
+        document.getElementById(`card-${cardNum}-lang`).childNodes.item(1).style.backgroundColor = "#303030"
+        document.getElementById(`card-${cardNum}-lang`).childNodes.item(3).style.backgroundColor = "#080808"
     } else {
         for (var i of document.getElementById("playfield").childNodes.entries()) {
             if (i[1].id) {
@@ -123,10 +123,10 @@ function showEn(cardNum=undefined) {
 
 function showDe(cardNum=undefined) {
     if (cardNum) {
-        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(1).style.transform = "translateX(-100%)";
-        document.getElementById("card-"+cardNum).childNodes.item(1).childNodes.item(3).style.transform = "translateX(0%)";
-        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(1).style.backgroundColor = "#080808"
-        document.getElementById("card-"+cardNum).childNodes.item(5).childNodes.item(3).style.backgroundColor = "#303030"
+        document.getElementById(`card-${cardNum}-desc`).childNodes.item(1).style.transform = "translateX(-100%)";
+        document.getElementById(`card-${cardNum}-desc`).childNodes.item(3).style.transform = "translateX(0%)";
+        document.getElementById(`card-${cardNum}-lang`).childNodes.item(1).style.backgroundColor = "#080808"
+        document.getElementById(`card-${cardNum}-lang`).childNodes.item(3).style.backgroundColor = "#303030"
     } else {
         for (var i of document.getElementById("playfield").childNodes.entries()) {
             if (i[1].id) {

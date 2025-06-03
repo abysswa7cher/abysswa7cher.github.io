@@ -85,8 +85,12 @@ body {
   overflow: hidden;
   height: 700px;
   width: 400px;
-  border-radius: 5px;
   background-color: #080808;
+}
+@media (min-width: 768px) {
+  .card-wrapper {
+    border-radius: 5px;
+  }
 }
 .card-wrapper .img-wrapper {
   position: absolute;
